@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        meta(charset = 'utf-8')
+        title Hotel Grand Budapest
+        style
+            include ../css/font-awesome.min.css
+            include ../css/main.css
+    body
+        div(class='navigator')
+            nav-component
+    
+        p Hello!
+
+        div(class='router-here-for')
+            torouter-component
+        include /gear/qwerty.pug
+        
+        // add Vue components
+        div(class='sales-here')
+            sales-component
+            
+        include /gear/calc.pug
