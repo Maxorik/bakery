@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
-import Busket from './components/Busket';
+import Sales from './components/Sales';
 import Not404 from './components/Not404'
 
 const routes = [
