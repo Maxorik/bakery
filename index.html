@@ -1,0 +1,164 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>test_table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src='vue.js'></script>
+<style>
+    body{
+        padding: 20px;
+    }
+    
+    .class1{
+        color:greenyellow;
+    }
+    
+    .class2{
+        font-style: italic;
+    }
+    .class3{
+        border-bottom: 1px dashed red;
+    }
+    .class4{
+        font-size: 30px;
+    }
+    .class5{
+        font-weight: 900;
+        color:green;
+    }
+</style>
+</head>
+<body>
+    <div class='wrapper'>
+        <input type='text' 
+               v-on:input='name = $event.target.value'
+               v-bind:value='name'
+        >
+        <input type="button" v-on:click='showName = !showName' value="toggle">
+        <h2 v-if='showName' :class='supertext'>Hi {{name}}</h2>
+    </div>
+    
+    <div class='two_input'>
+        <input type='text' v-model='product'>
+        <input type='text' v-model='price' v-on:change='itog()'>
+        <h2> {{ result }} </h2>
+        <h2 v-if='show'> Готово! </h2>
+    </div>
+    
+    <div class='fort'>
+        <ul>
+            <li v-for='key in list'>
+                {{ key }}
+            </li>
+        </ul>
+    </div>
+    
+    <div class='random'>
+        <div style='display: flex; align-items: baseline;'>
+            <div style='margin-right: 30px'>
+                <p v-for='(key,index) in classes'>
+                    <input type="checkbox" class='nopadding' v-model='classes[index]'> {{index}}
+                </p>
+            </div>
+            <div>
+                <input type="radio" value='class4' v-model='check_class'> Class4
+                <input type="radio" value='class5' v-model='check_class'> Class5
+            </div>
+        </div>
+        <input type='button' v-on:click='set_number()' value='add to list'>
+        <ul :class='check_class'>
+            <li v-for='(key, index) in random_arr' :class='classes'>
+                {{ index+1 }}: {{ key }}
+            </li>
+        </ul>
+    </div>
+    
+    <div class='react-style'>
+        <div :style='styles'>
+            Text in block
+        </div>
+        <table style='table-layout: fixed;'>
+            <tr v-for='(name, key) in styles' >
+                <td style='width: 150px;'>
+                    {{ key }}
+                    <input type='text' v-model='styles[key]'>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+<script>
+    let first = new Vue({
+        el:'.wrapper',
+        data: {
+            name: 'Maxorik',
+            showName: true
+        },
+        computed:{
+            supertext(){
+                return ['class1', 'class2'];
+            }
+        }
+    });
+    
+    let computed = new Vue({
+        el:'.two_input' ,
+        data: {
+            product: '',
+            price: '',
+            show: false
+        },
+        computed: {
+            result(){
+                return this.product + ' = ' + this.price;
+            }
+        },
+        methods:{
+            itog(){
+                this.show=!this.show;
+            }
+        }
+    });
+    
+    let list = new Vue({
+        el:'.fort',
+        data: {
+            list: ['cool', 'smart']
+        }
+    });
+    
+    let random = new Vue({
+        el:'.random',
+        data:{
+            random_arr:[],
+            i:2,
+            classes:{
+                class1: false,
+                class2: false,
+                class3: false
+            },
+            check_class:''
+        },
+        methods:{
+            set_number(){
+                this.random_arr.push(this.i);
+                this.i = this.i * 13;
+            }
+        }
+    });
+    
+    let react_style = new Vue({
+        el:'.react-style',
+        data:{
+            styles:{
+                color:'black',
+                fontSize:'14px',
+                backgroundColor:'white'
+            }
+        }
+    });
+</script>
+
+</body>   
+</html>
