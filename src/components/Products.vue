@@ -78,7 +78,8 @@
             ...mapGetters('products',{
                 muffins: 'muffins',
                 capcakes:'capcakes',
-                rulets:'rulets'
+                rulets:'rulets',
+                totalprice: 'totalPrice'
             })
         },
         

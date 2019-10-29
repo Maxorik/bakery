@@ -5,7 +5,8 @@ export default {
         muffins: getMuffins(),
         capcakes: getCapcakes(),
         rulets: getRulets(),
-        allBake: allProducts() //товары всех категорий
+        allBake: allProducts(), //товары всех категорий
+        orderSum:''
     },
     mutations: {
         changeCount(state, payload){  //передаем массив из id и кол-ва
@@ -17,7 +18,22 @@ export default {
                     obj.count = value;      //изменяем кол-во заказанного товара
                 }
             }
-            
+        },
+        
+        plusCount(state, id){
+            for(let j=0; j<state.allBake.length; j++ ){
+                if(state.allBake[j].id === id){
+                    +state.allBake[j].count++;     
+                }
+            }
+        },
+        
+        minusCount(state, id){
+            for(let j=0; j<state.allBake.length; j++ ){
+                if(state.allBake[j].id === id){
+                    +state.allBake[j].count--;     
+                }
+            }
         }
     },
     actions: {},
@@ -36,7 +52,21 @@ export default {
         
         allBake(state){
 			return state.allBake;
-		}
+		},
+        
+        totalPrice(state){
+			return state.totalPrice;
+		},
+        
+        orderSum(state){
+            let sum=0;
+            for(let i=0; i<state.allBake.length; i++){
+                if(state.allBake[i].count !== ''){
+                    sum = sum+ +state.allBake[i].count * +state.allBake[i].price;
+                }
+            }
+            return sum;
+        }
     }
 }
 
