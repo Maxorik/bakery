@@ -3,10 +3,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-import sales from './sales'
+import about from './about'
+import busket from './busket'
+import order from './order'
+import products from './products'
 
 export default new Vuex.Store({
     modules: {
-        sales
-    }
+        about,
+        busket,
+        order,
+        products
+    },
+    namespaced: true
 })

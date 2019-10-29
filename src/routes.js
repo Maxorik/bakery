@@ -3,18 +3,36 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
-import Sales from './components/Sales';
+import Busket from './components/Busket';
+import About from './components/About';
+import Order from './components/Order';
+import Products from './components/Products';
 import Not404 from './components/Not404'
 
 const routes = [
     {
         path:'',  //main page
-        redirect: {name: 'sales'} //перенаправление на нужный компонент
+        redirect: {name: 'about'} 
     },
     {
-        path:'/sales',  //url страницы, где нужен компонент
-        component: Sales,
-        name: 'sales'
+        path:'/busket',  
+        component: Busket,
+        name: 'busket'
+    },
+    {
+        path:'/about',  
+        component: About,
+        name: 'about'
+    },
+    {
+        path:'/products', 
+        component: Products,
+        name: 'products'
+    },
+     {
+        path:'/order',  
+        component: Order,
+        name: 'order'
     },
 
     {

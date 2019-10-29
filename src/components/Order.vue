@@ -1,13 +1,15 @@
 <template>
     <section>
-        <div class="router">
-            <router-view></router-view>
+        <div class="nocontainer">
+            <p>Order here</p>
+        
         </div>
     </section>
 </template>
 
 <script type='module'>
-    import {mapGetters} from 'vuex';
+    //import {mapGetters} from 'vuex';
+    import {mapMutations} from 'vuex';
     
     export default {
         data () {
@@ -17,4 +19,3 @@
         }
 }
 </script>
-

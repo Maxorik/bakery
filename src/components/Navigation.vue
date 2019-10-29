@@ -1,14 +1,10 @@
 <template>
     <section>
-        <div class="router">
-            <div class='nav'>
-                <p><router-link to='/busket'>Вернуться на busket</router-link></p>
-                <p><router-link to='/sales'>Вернуться на sales</router-link></p>
-            </div>
-        
-            <div> Навигация удобная (расширяемый объект):
+        <div class="router">        
+            <div class='menu-part'>
                 <router-link v-for='(item, index) in pages'
                              :key='index'
+                             class='menu-route'
                              :to='item.url'
                              active-class='nav-active'
                              >
@@ -28,16 +24,20 @@
             return {
                 pages:[
                 {
-                    name:'Числа',
-                    url:'/sales'
+                    name:'О нас',
+                    url:'/about'
                 },
                 {
-                    name:'Результат',
+                    name:'Товары',
+                    url:'/products'
+                },
+                {
+                    name:'Корзина',
                     url:'/busket'
                 },
                 {
-                    name:'404',
-                    url:'*'
+                    name:'Заказ',
+                    url:'/order'
                 }
                 ]
             }
@@ -46,20 +46,29 @@
 </script>
 
 <style>
-    .nav{
+    .menu-part{
         display: flex;
-        color:darkcyan;
+        flex-direction: column;
+        font-size: 22px;
+        padding: 5px;
+        transition: background-color 1s color 1s;
+        text-decoration: none;
     }
     
-    .nav p{
-        margin: 10px;
-        border: 1px solid darkcyan;
+    .menu-route{
+        text-decoration: none;
+        padding: 5px;
+        transition: background-color 1s color 1s;
+    }
+    
+    .menu-route:hover, .nav-active, .menu-route:link{
+        text-decoration: none;
     }
     
     .nav-active{
         background-color: aqua;
         color:aliceblue;
-        padding: 2px;
+        padding: 5px;
         transition: background-color 1s color 1s;
     }
 </style>
