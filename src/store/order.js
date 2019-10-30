@@ -33,7 +33,6 @@ export default {
             else{
                 state.inputs[key].classes = 'valid';
             }
-             //disable_button();
             }
   },
   actions: {},

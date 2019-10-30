@@ -21,6 +21,7 @@ export default {
                 let rul = state.rulets[j];
                 
                 if(obj.id === id){
+                    //замена всех НЕ чисел
                     if(!pattern.test(value)){
                         obj.count = value.replace(/[^\w\d]/g, '');
                     }
@@ -28,6 +29,7 @@ export default {
                         obj.count = value;      //изменяем кол-во заказанного товара
                     }
                     
+                    //обновление исходных массивов
                     check(id, state.muffins, obj.count);
                     check(id, state.capcakes, obj.count);
                     check(id, state.rulets, obj.count);

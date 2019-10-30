@@ -87,37 +87,3 @@
         }
 }
 </script>
-
-<style>
-    .anketa{
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-    
-    .anketa div, .auto{
-        width: 100%;
-    }
-    
-    .anketa-input{
-        margin-bottom: 10px;
-    }
-    
-    ::-webkit-inner-spin-button { display: none; }
-    
-    textarea {
-        resize: none; 
-    } 
-    
-    .not-valid{
-        color:red;
-    }
-    
-    .valid{
-        color:#000;
-    }
-    
-    .time{
-        text-align: center;
-    }
-</style>

@@ -44,31 +44,3 @@
         }
 }
 </script>
-
-<style>
-    .menu-part{
-        display: flex;
-        flex-direction: column;
-        font-size: 22px;
-        padding: 5px;
-        transition: background-color 1s color 1s;
-        text-decoration: none;
-    }
-    
-    .menu-route{
-        text-decoration: none;
-        padding: 5px;
-        transition: background-color 1s color 1s;
-    }
-    
-    .menu-route:hover, .nav-active, .menu-route:link{
-        text-decoration: none;
-    }
-    
-    .nav-active{
-        background-color: aqua;
-        color:aliceblue;
-        padding: 5px;
-        transition: background-color 1s color 1s;
-    }
-</style>

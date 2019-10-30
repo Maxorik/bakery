@@ -8,7 +8,7 @@
 </template>
 
 <script type='module'>
-    //import {mapGetters} from 'vuex';
+    import {mapGetters} from 'vuex';
     import {mapMutations} from 'vuex';
     
     export default {
