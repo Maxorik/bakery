@@ -2,11 +2,11 @@
     <section>
         <div class="nocontainer">
             <div class='products-menu'>
-                <p class='products-nav' v-on:click='productType=1'>Маффины</p>
-                <p class='products-nav' v-on:click='productType=2'>Капкейки</p>
+                <p class='products-nav' v-on:click='productType=1'>Капкейки</p>
+                <p class='products-nav' v-on:click='productType=2'>Маффины</p>
                 <p class='products-nav' v-on:click='productType=3'>Кексы</p>
             </div>
-            <div class='products' v-if='productType==1'>
+            <div class='products' v-if='productType==2'>
                 <div v-for='product in muffins' class='product-item'>
                     <div>{{ product.name }}</div>
                     <img :src='product.photo' class='product-img'>
@@ -14,28 +14,28 @@
                     <div class='flex'>
                         <input type=text class='product-count' placeholder='Сколько штук?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
                         <button class='product-button btn-primary'
-                                @click='add(product.id)'
+                                @click='add([product.id, product.count])'
                                 >Взять</button>
                     </div>
                     <div class='flex'>
                         
-                        <button class='product-button btn-warning' @click='remove(product.id)'>Убрать</button>
+                        <button class='product-button btn-warning' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
             
-            <div class='products' v-if='productType==2'>
+            <div class='products' v-if='productType==1'>
                 <div v-for='product in capcakes' class='product-item'>
                     <div>{{ product.name }}</div>
                     <img :src='product.photo' class='product-img'>
                     <div>Цена: {{ product.price }} </div>
                     <div class='flex'>
                         <input type=text class='product-count' placeholder='Сколько штук?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
-                        <button class='product-button btn-primary' @click='add(product.id)'>Взять</button>
+                        <button class='product-button btn-primary' @click='add([product.id, product.count])'>Взять</button>
                     </div>
                     
                     <div class='flex'>
-                        <button class='product-button btn-warning' @click='remove(product.id)'>Убрать</button>
+                       <button class='product-button btn-warning' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
@@ -47,11 +47,11 @@
                     <div>Цена: {{ product.price }} </div>
                     <div class='flex'>
                         <input type=text class='product-count' placeholder='Сколько штук?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
-                        <button class='product-button btn-primary' @click='add(product.id)'>Взять</button>
+                        <button class='product-button btn-primary' @click='add([product.id, product.count])'>Взять</button>
                     </div>
                     
                     <div class='flex'>
-                        <button class='product-button btn-warning' @click='remove(product.id)'>Убрать</button>
+                        <button class='product-button btn-warning' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
@@ -86,15 +86,16 @@
         //запрашиваем у busket.js действия с товарами
         methods:{
             ...mapMutations('busket',{
-                add:'addToCart',
-                remove:'removeFromCart'
+               add:'addToCart',
+               remove:'removeFromCart'
             }),
             
            ...mapMutations('products',{
-                setcount:'changeCount'
+               setcount:'changeCount',
+               discount:'discount'
             })
         }
-}
+    }
 </script>
 
 <style>

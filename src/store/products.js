@@ -12,10 +12,26 @@ export default {
         changeCount(state, payload){  //передаем массив из id и кол-ва
             let id = payload[0];
             let value = payload[1];
+            let pattern = /^[0-9]{1,4}$/;
+                  
             for(let j=0; j<state.allBake.length; j++ ){
                 let obj = state.allBake[j];
+                let muf = state.muffins[j];
+                let cap = state.capcakes[j];
+                let rul = state.rulets[j];
+                
                 if(obj.id === id){
-                    obj.count = value;      //изменяем кол-во заказанного товара
+                    if(!pattern.test(value)){
+                        obj.count = value.replace(/[^\w\d]/g, '');
+                    }
+                    else{
+                        obj.count = value;      //изменяем кол-во заказанного товара
+                    }
+                    
+                    check(id, state.muffins, obj.count);
+                    check(id, state.capcakes, obj.count);
+                    check(id, state.rulets, obj.count);
+                  
                 }
             }
         },
@@ -23,7 +39,10 @@ export default {
         plusCount(state, id){
             for(let j=0; j<state.allBake.length; j++ ){
                 if(state.allBake[j].id === id){
-                    +state.allBake[j].count++;     
+                    +state.allBake[j].count++;
+                    check(id, state.muffins, state.allBake[j].count);
+                    check(id, state.capcakes, state.allBake[j].count);
+                    check(id, state.rulets, state.allBake[j].count);
                 }
             }
         },
@@ -31,7 +50,21 @@ export default {
         minusCount(state, id){
             for(let j=0; j<state.allBake.length; j++ ){
                 if(state.allBake[j].id === id){
-                    +state.allBake[j].count--;     
+                    +state.allBake[j].count--;   
+                    check(id, state.muffins, state.allBake[j].count);
+                    check(id, state.capcakes, state.allBake[j].count);
+                    check(id, state.rulets, state.allBake[j].count);
+                }
+            }
+        },
+        
+        discount(state, id){
+            for(let j=0; j<state.allBake.length; j++ ){
+                if(state.allBake[j].id === id){
+                    state.allBake[j].count = '';  
+                    check(id, state.muffins, state.allBake[j].count);
+                    check(id, state.capcakes, state.allBake[j].count);
+                    check(id, state.rulets, state.allBake[j].count);
                 }
             }
         }
@@ -66,6 +99,14 @@ export default {
                 }
             }
             return sum;
+        }
+    }
+}
+
+function check(id, arr, value){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i].id == id){
+            arr[i].count = value;
         }
     }
 }
