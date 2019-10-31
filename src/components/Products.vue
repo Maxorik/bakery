@@ -2,11 +2,17 @@
     <section>
         <div class="nocontainer">
             <div class='products-menu'>
-                <div class='products-nav' v-on:click='productType=1; hih($event.target)'>Капкейки</div>
+                <div class='products-nav products-nav-active' v-on:click='productType=1; hih($event.target)'>Капкейки</div>
                 <div class='products-nav' v-on:click='productType=2; hih($event.target)'>Маффины</div>
                 <div class='products-nav' v-on:click='productType=3; hih($event.target)'>Рулеты</div>
             </div>
-            <div class='products' v-if='productType==2'>
+            
+            <hr class='top-menu-hr'>
+            
+            <!-- transition -->
+            
+            <transition name='fadeAndReturn'>
+            <div class='products' v-if='productType==2' key='muffins'>
                 <div v-for='product in muffins' class='product-item'>
                     <div class='product-name'>{{ product.name }}</div>
                     <img :src='product.photo' class='product-img'>
@@ -18,13 +24,12 @@
                                 >Взять</button>
                     </div>
                     <div class='flex'>
-                        
                         <button class='product-button btn-del' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
             
-            <div class='products' v-if='productType==1'>
+            <div class='products' v-if='productType==1' key='capcakes'>
                 <div v-for='product in capcakes' class='product-item'>
                     <div class='product-name'>{{ product.name }}</div>
                     <img :src='product.photo' class='product-img'>
@@ -40,7 +45,7 @@
                 </div>
             </div>
             
-            <div class='products' v-if='productType==3'>
+            <div class='products' v-if='productType==3' key='rulets'>
                 <div v-for='product in rulets' class='product-item'>
                     <div class='product-name'>{{ product.name }}</div>
                     <img :src='product.photo' class='product-img'>
@@ -55,6 +60,7 @@
                     </div>
                 </div>
             </div>
+            </transition>
             
             <div class='btn-part'>
                 <router-link class='btn-route' to='/busket'>В корзину</router-link>
@@ -107,3 +113,42 @@
     }
                                       
 </script>
+
+<style>
+    .fadeAndReturn-enter{
+        opacity:0;
+    }
+    
+    .fadeAndReturn-enter-active{
+        transition: opacity 1s;
+        animation: slideIn 0.5s;
+    }
+    
+     .fadeAndReturn-enter-to{
+        
+    }
+    
+    .fadeAndReturn-leave{
+        position: absolute;
+    }
+    
+    .fadeAndReturn-leave-active{
+        transition: opacity 1s;
+        opacity: 0;
+        animation: slideOut 0.5s;
+    }
+    
+    .fadeAndReturn-leave-to{
+        position: absolute;
+    }
+    
+    @keyframes slideIn{
+		from{transform: translateX(-100vw);}
+		to{transform: translateX(0px);}
+	}
+
+	@keyframes slideOut{
+		from{transform: translateX(0px);}
+		to{transform: translateX(100vw);}
+	}
+</style>

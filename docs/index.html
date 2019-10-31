@@ -20,6 +20,10 @@
   /* IE9 Compat Modes */
   src: url("/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.woff") format("woff"), url("/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "LydianBT-Roman";
+  src: url("/assets/fonts/18070.woff") format("woff"); }
+
 /*colors
 color:#1c0c21;
 color:#c891b9;
@@ -98,6 +102,7 @@ header{
     
     .busket-product{
         font-size: 1.5em;
+        font-family:LydianBT-Roman;
     }
     
     .btn-circle{
@@ -128,11 +133,13 @@ header{
 .busket-sum{
     font-size: 1.5em;
     color: #1c0c21;
+    font-family:LydianBT-Roman;
 }
 
 .check, .check-head{
     font-size: 1.3em;
     color: #1c0c21;
+    font-family:LydianBT-Roman;
 }
 
 .check{
@@ -173,8 +180,12 @@ header{
     
     .product-item{
         margin-right: 15px;
-        width: 32%;
+        width: 30%;
     }
+
+.product-item:last-child{
+    margin-right:0;
+}
     
     .product-img{
         width:100%;
@@ -198,7 +209,15 @@ header{
         cursor: pointer;
         margin-right: 1px;
         padding: 0 20px;
+        font-family:LydianBT-Roman;
     }
+
+.top-menu-hr{
+    border-bottom: 1px solid #1c0c21;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
 
 .products-nav:hover, .products-nav-active{
     background-color:#c891b9;
@@ -207,6 +226,7 @@ header{
     cursor: pointer;
     margin-right: 1px;
     padding: 0 20px;
+    font-family:LydianBT-Roman;
 }
 
     .product-button{
@@ -232,6 +252,7 @@ header{
         color:beige;
         font-size: 1.5em;
         padding: 5px 20px;
+        font-family:LydianBT-Roman;
     }
 
 .btn-route:hover{
@@ -243,6 +264,7 @@ header{
 
 .product-name{
     font-size: 1.3em;
+    font-family:LydianBT-Roman;
     line-height: 1.35em;
     text-align: center;
     margin-top: 5%;
@@ -283,7 +305,7 @@ header{
     border-left: 0.9em solid #c891b9;
 }
     
-    .menu-route:hover, .nav-active, .menu-route:link{
+    .menu-route:hover, .nav-active, .menu-route:link, .menu-route:focus{
         text-decoration: none;
         color: beige;
         position: relative;
@@ -360,5 +382,6 @@ table tr{
     font-size: 1.7em;
     color:#1c0c21;
     font-weight: 300;
+    font-family:LydianBT-Roman;
 }
-</style></head><body><header><div class="img-head"><img class="img-head img-logo" src="assets/img/logo.png"></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head"><img class="img-head" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><script type="text/javascript" src="assets/js/vendors.e6efac98c31af43a770f.js"></script><script type="text/javascript" src="assets/js/app.e6efac98c31af43a770f.js"></script></body></html>
+</style><link href="assets/css/app.1d88dd9ed674f920ee6e.css" rel="stylesheet"></head><body><header><div class="img-head"><img class="img-head img-logo" src="assets/img/logo.png"></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head"><img class="img-head" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><script type="text/javascript" src="assets/js/vendors.1d88dd9ed674f920ee6e.js"></script><script type="text/javascript" src="assets/js/app.1d88dd9ed674f920ee6e.js"></script></body></html>

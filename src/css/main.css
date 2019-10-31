@@ -4,6 +4,10 @@
   /* IE9 Compat Modes */
   src: url("/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.woff") format("woff"), url("/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "LydianBT-Roman";
+  src: url("/assets/fonts/18070.woff") format("woff"); }
+
 /*colors
 color:#1c0c21;
 color:#c891b9;
@@ -82,6 +86,7 @@ header{
     
     .busket-product{
         font-size: 1.5em;
+        font-family:LydianBT-Roman;
     }
     
     .btn-circle{
@@ -112,11 +117,13 @@ header{
 .busket-sum{
     font-size: 1.5em;
     color: #1c0c21;
+    font-family:LydianBT-Roman;
 }
 
 .check, .check-head{
     font-size: 1.3em;
     color: #1c0c21;
+    font-family:LydianBT-Roman;
 }
 
 .check{
@@ -157,8 +164,12 @@ header{
     
     .product-item{
         margin-right: 15px;
-        width: 32%;
+        width: 30%;
     }
+
+.product-item:last-child{
+    margin-right:0;
+}
     
     .product-img{
         width:100%;
@@ -182,7 +193,15 @@ header{
         cursor: pointer;
         margin-right: 1px;
         padding: 0 20px;
+        font-family:LydianBT-Roman;
     }
+
+.top-menu-hr{
+    border-bottom: 1px solid #1c0c21;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
 
 .products-nav:hover, .products-nav-active{
     background-color:#c891b9;
@@ -191,6 +210,7 @@ header{
     cursor: pointer;
     margin-right: 1px;
     padding: 0 20px;
+    font-family:LydianBT-Roman;
 }
 
     .product-button{
@@ -216,6 +236,7 @@ header{
         color:beige;
         font-size: 1.5em;
         padding: 5px 20px;
+        font-family:LydianBT-Roman;
     }
 
 .btn-route:hover{
@@ -227,6 +248,7 @@ header{
 
 .product-name{
     font-size: 1.3em;
+    font-family:LydianBT-Roman;
     line-height: 1.35em;
     text-align: center;
     margin-top: 5%;
@@ -267,7 +289,7 @@ header{
     border-left: 0.9em solid #c891b9;
 }
     
-    .menu-route:hover, .nav-active, .menu-route:link{
+    .menu-route:hover, .nav-active, .menu-route:link, .menu-route:focus{
         text-decoration: none;
         color: beige;
         position: relative;
@@ -344,4 +366,5 @@ table tr{
     font-size: 1.7em;
     color:#1c0c21;
     font-weight: 300;
+    font-family:LydianBT-Roman;
 }

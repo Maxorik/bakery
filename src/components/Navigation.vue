@@ -25,18 +25,22 @@
                 pages:[
                 {
                     name:'О нас',
+                    fa:'',
                     url:'/about'
                 },
                 {
                     name:'Товары',
+                    fa:'',
                     url:'/products'
                 },
                 {
                     name:'Корзина',
+                    fa:'',
                     url:'/busket'
                 },
                 {
                     name:'Заказ',
+                    fa:'',
                     url:'/order'
                 }
                 ]

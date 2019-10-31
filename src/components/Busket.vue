@@ -4,7 +4,7 @@
             <div class='busket-sum' v-if='empty()'>
                 <p>Ваша корзина пуста</p><br>
                 <div class='takeme'>
-                    <img src='../img/takeme.png' class='takeme-img'>
+                    <img src='../img/takeme4.png' class='takeme-img'>
                     <p>Возьми меня с собой!</p>
                     <router-link class='btn-route' to='/products'>Выбрать</router-link>
                 </div>

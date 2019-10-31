@@ -52,7 +52,9 @@ export default {
         minusCount(state, id){
             for(let j=0; j<state.allBake.length; j++ ){
                 if(state.allBake[j].id === id){
-                    +state.allBake[j].count--;   
+                    if(+state.allBake[j].count != 0){
+                        +state.allBake[j].count--; 
+                    }  
                     check(id, state.muffins, state.allBake[j].count);
                     check(id, state.capcakes, state.allBake[j].count);
                     check(id, state.rulets, state.allBake[j].count);
@@ -120,28 +122,28 @@ function getMuffins(){
             id: 1,
             name: 'Ореховый взгляд',
             price: 200,
-            photo: '../img/muf1.jpg',
+            photo: './img/muf1.jpg',
             count:''
         },
          {
             id: 11,
             name: 'Тающий на языке',
             price: 220,
-            photo: '../img/muf4.jpg',
+            photo: './img/muf4.jpg',
             count:''
         },
         {
             id: 2,
             name: 'Шоколадный восторг',
             price: 310,
-            photo: '../img/muf2.jpg',
+            photo: './img/muf2.jpg',
             count:''
         },
         {
             id: 3,
             name: 'Ваниль богов',
             price: 180,
-            photo: '../img/muf3.jpg',
+            photo: './img/muf3.jpg',
             count:''
         }
     ]
@@ -153,28 +155,28 @@ function getCapcakes(){
             id: 14,
             name: 'Твоя вишенка',
             price: 245,
-            photo: '../img/cap4.jpg',
+            photo: './img/cap4.jpg',
             count:''
         },
         {
             id: 4,
             name: 'Звездная нежность',
             price: 145,
-            photo: '../img/cap1.jpg',
+            photo: './img/cap1.jpg',
             count:''
         },
         {
             id: 5,
             name: 'Малиновый фреш',
             price: 210,
-            photo: '../img/cap2.jpg',
+            photo: './img/cap2.jpg',
             count:''
         },
         {
             id: 6,
             name: 'Сладкий август',
             price: 230,
-            photo: '../img/cap3.jpg',
+            photo: './img/cap3.jpg',
             count:''
         }
     ]
@@ -186,28 +188,28 @@ function getRulets(){
             id: 7,
             name: 'Клубничный водопад',
             price: 300,
-            photo: '../img/rulet1.jpg',
+            photo: './img/rulet1.jpg',
             count:''
         },
         {
             id: 8,
             name: 'Следы на луне',
             price: 340,
-            photo: '../img/rulet2.jpg',
+            photo: './img/rulet2.jpg',
             count:''
         },
         {
             id: 18,
             name: 'Вечер с корицей',
             price: 350,
-            photo: '../img/rulet4.jpg',
+            photo: './img/rulet4.jpg',
             count:''
         },
         {
             id: 9,
             name: 'Ореховый ролл',
             price: 380,
-            photo: '../img/rulet3.jpg',
+            photo: './img/rulet3.jpg',
             count:''
         }
     ]

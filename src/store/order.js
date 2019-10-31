@@ -4,7 +4,7 @@ export default {
         inputs:[{
             name:'Ваше ФИО *',
             value:'',
-            pattern: /^[а-яА-Я]{2,20}[ ][а-яА-Я]{2,20}$/,
+            pattern: /^[а-яА-Я]{2,20}[ ][а-яА-Я]{2,20}/,
             classes:''
         },
         {
