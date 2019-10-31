@@ -27,7 +27,7 @@ body{
     padding: 0;
     background: url(../img/bg.png);
     padding-top: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .router-part{
@@ -289,7 +289,7 @@ header{
     border-left: 0.9em solid #c891b9;
 }
     
-    .menu-route:hover, .nav-active, .menu-route:link, .menu-route:focus{
+    .menu-route:hover, .menu-route:focus{
         text-decoration: none;
         color: beige;
         position: relative;
@@ -367,4 +367,38 @@ table tr{
     color:#1c0c21;
     font-weight: 300;
     font-family:LydianBT-Roman;
+}
+
+/*about*/
+.about-here{
+    display:flex;
+    justify-content: space-between;
+}
+
+.about-text{
+    width:50%;
+    font-size: 1.2em;
+}
+
+.about-here p{
+    padding: 0;
+    margin: 0;
+}
+
+.about-img{
+    width:94%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.what-btn{
+    text-align: center;
+    margin-top: 3%;
+}
+
+
+/*footer*/
+footer{
+    border-top: 1px solid #1c0c21;
+    min-height: 100px;
 }
