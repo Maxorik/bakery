@@ -22,7 +22,6 @@ export default {
     },
   mutations: { 
       validate(state, payload){
-            console.log(payload);
             let target = payload[0];
             let key = payload[1];
             let pattern = state.inputs[key].pattern;

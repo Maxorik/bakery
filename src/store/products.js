@@ -118,21 +118,28 @@ function getMuffins(){
     return [
         {
             id: 1,
-            name: 'muffin1',
+            name: 'Ореховый взгляд',
             price: 200,
             photo: '../img/muf1.jpg',
             count:''
         },
+         {
+            id: 11,
+            name: 'Тающий на языке',
+            price: 220,
+            photo: '../img/muf4.jpg',
+            count:''
+        },
         {
             id: 2,
-            name: 'muffin2',
+            name: 'Шоколадный восторг',
             price: 310,
             photo: '../img/muf2.jpg',
             count:''
         },
         {
             id: 3,
-            name: 'muffin3',
+            name: 'Ваниль богов',
             price: 180,
             photo: '../img/muf3.jpg',
             count:''
@@ -143,22 +150,29 @@ function getMuffins(){
 function getCapcakes(){
     return [
         {
+            id: 14,
+            name: 'Твоя вишенка',
+            price: 245,
+            photo: '../img/cap4.jpg',
+            count:''
+        },
+        {
             id: 4,
-            name: 'capcake1',
+            name: 'Звездная нежность',
             price: 145,
             photo: '../img/cap1.jpg',
             count:''
         },
         {
             id: 5,
-            name: 'capcake2',
+            name: 'Малиновый фреш',
             price: 210,
             photo: '../img/cap2.jpg',
             count:''
         },
         {
             id: 6,
-            name: 'capcake3',
+            name: 'Сладкий август',
             price: 230,
             photo: '../img/cap3.jpg',
             count:''
@@ -170,21 +184,28 @@ function getRulets(){
     return [
         {
             id: 7,
-            name: 'rulet1',
+            name: 'Клубничный водопад',
             price: 300,
             photo: '../img/rulet1.jpg',
             count:''
         },
         {
             id: 8,
-            name: 'rulet2',
+            name: 'Следы на луне',
             price: 340,
             photo: '../img/rulet2.jpg',
             count:''
         },
         {
+            id: 18,
+            name: 'Вечер с корицей',
+            price: 350,
+            photo: '../img/rulet4.jpg',
+            count:''
+        },
+        {
             id: 9,
-            name: 'rulet3',
+            name: 'Ореховый ролл',
             price: 380,
             photo: '../img/rulet3.jpg',
             count:''

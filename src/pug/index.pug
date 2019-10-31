@@ -8,7 +8,18 @@ html
             include ../css/font-awesome.min.css
             include ../css/main.css
     body
-        div(class='container')
+        header
+            div(class='img-head')
+                img(class='img-head img-logo' src=require('../img/logo.png'))
+                
+            div(class='row-flex')
+                div(class='icons')
+                    span(class='fa fa-instagram icon')
+                    span(class='fa fa-vk icon')
+                    span(class='fa fa-facebook-square icon')
+                div(class='img-head')
+                    img(class='img-head' src=require('../img/tohead.png'))                    
+        div(class='main_part')
             div(class='nav-here')
                 nav-component
             div(class='router-part')

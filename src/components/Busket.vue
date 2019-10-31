@@ -1,10 +1,17 @@
 <template>
     <section>
         <div class="nocontainer">
-            <div v-if='empty()'>Ваша корзина пуста</div>
+            <div class='busket-sum' v-if='empty()'>
+                <p>Ваша корзина пуста</p><br>
+                <div class='takeme'>
+                    <img src='../img/takeme.png' class='takeme-img'>
+                    <p>Возьми меня с собой!</p>
+                    <router-link class='btn-route' to='/products'>Выбрать</router-link>
+                </div>
+            </div>
             <div v-else class='grid'>
                 <div v-for='product in productsToOrder'>
-                    <div>{{ product.name }}</div>
+                    <div class='product-name'>{{ product.name }}</div>
                     <img :src='product.photo' class='product-img'>
                     <div class='busket-change'>
                         <button class='btn-circle' @click='minuscount(product.id)'>-</button>
@@ -14,11 +21,11 @@
                 </div>
             </div>
             <div>
-                <p>Всего к оплате: {{ordersum}} рублей</p>
+                <p v-if='!empty()' class='busket-sum'>Всего к оплате: {{ordersum}} рублей</p>
             </div>
             <div class='btn-part'>
-                <router-link class='menu-route btn-route' to='/products'>Выбрать еще</router-link>
-                <router-link class='menu-route btn-route' to='/order'>Оформить заказ</router-link>
+                <router-link class='btn-route' to='/products' v-if='!empty()'>Выбрать еще</router-link>
+                <router-link class='btn-route' to='/order' v-if='!empty()'>Оформить заказ</router-link>
             </div>
         </div>
     </section>

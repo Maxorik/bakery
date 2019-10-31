@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class='flex'>
+        <div class='checklist'>
         <div class="anketa">
             <div v-for='(value, index) in inputs' :key='index'>
                 <label :class='value.classes'>{{ value.name }}</label><br>
@@ -17,33 +17,32 @@
             <textarea type='text' class='anketa-input'></textarea>
         
             <p>* - обязательные к заполнению поля</p>
-            <button class='btn-primary'>Оформить заказ</button>
+            <button class='btn-route'>Оформить заказ</button>
         </div>
         <div class='order-total'>
-            <p>Ваш заказ:</p>
-            <div v-if='productsToOrder.length == 0'>
-                Пока что вы ничего не заказали
+            <p class='busket-sum'>Ваш заказ:</p>
+            <div v-if='productsToOrder.length == 0' class='check'>
+                Пока что вы ничего не заказали<br>
+                <router-link class='btn-route' to='/products'>К кексикам! </router-link>
             </div>
             <div  v-else><table>
                 <tr>
-                    <td>Наименование</td>
-                    <td>Количество</td>
-                    <td>Сумма</td>
+                    <td class='check-head'>Наименование</td>
+                    <td class='check-head'>Количество</td>
+                    <td class='check-head'>Сумма</td>
                 </tr>
                 <tr v-for='value in productsToOrder'>
-                    <td>{{value.name}}</td>
-                    <td>{{value.count}}</td>
-                    <td>{{value.price * value.count}}</td>
+                    <td class='check'>{{value.name}}</td>
+                    <td class='check'>{{value.count}}</td>
+                    <td class='check'>{{value.price * value.count}} ₽</td>
                 </tr>
             </table>
-                <p>
-                    Итоговая сумма заказа: {{ ordersum }}
+                <p class='total-sum'>
+                    Итоговая сумма заказа: {{ ordersum }} ₽
                 </p>
             </div>
             </div>
         </div>
-            
-    </div>
     </section>
 </template>
 
