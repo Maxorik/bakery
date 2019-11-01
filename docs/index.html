@@ -2081,17 +2081,17 @@ footer{
     }
     
     .about-text{
-        width:99%;
+        width:97%;
         padding-right: 2px;
     }
     
     .products-menu{
         position:sticky;
+        text-align: left;
         top:50%;
-        max-width: 30%;
+        max-width: 40%;
         left:0;
-        padding: 0;
-        font-size:40%;
+        font-size:65%;
         display: flex;
         flex-direction: column;
         justify-content:flex-start;
@@ -2100,6 +2100,7 @@ footer{
     
     .products-nav, .products-nav-active{
         margin-top: 2px;
+        padding: 0px !important;
     }
     
     .products{
@@ -2116,11 +2117,10 @@ footer{
     }
     
     .grid{
-        width: 75vw;
-        display: grid;
-        grid-template-columns: repeat(2, 45%);
-        grid-auto-rows: 45%;
-        grid-gap: 1vw;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
     }
     
     .btn-busketpart{
@@ -2145,7 +2145,7 @@ footer{
     
     .checkTotal table{
         width:80%;
-        font-size: 0.8em;
+        font-size: 0.45em;
     }
     
     .anketa, .checkTotal{
@@ -2159,4 +2159,12 @@ footer{
     .btn-marg{
         margin-bottom: 10vh;
     }
-}</style></head><body><header><div class="img-head"><a href="#/about"><img class="img-logo" src="assets/img/logo.png"></a></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head mufjpg"><img class="img-logo" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><footer></footer><script type="text/javascript" src="assets/js/vendors.fb144085af4d56d3cc0e.js"></script><script type="text/javascript" src="assets/js/app.fb144085af4d56d3cc0e.js"></script></body></html>
+    
+     .basket{
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}</style></head><body><header><div class="img-head"><a href="#/about"><img class="img-logo" src="assets/img/logo.png"></a></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head mufjpg"><img class="img-logo" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><footer></footer><script type="text/javascript" src="assets/js/vendors.0426a6875fa0fc3bcb0a.js"></script><script type="text/javascript" src="assets/js/app.0426a6875fa0fc3bcb0a.js"></script></body></html>

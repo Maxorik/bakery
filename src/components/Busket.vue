@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="nocontainer">
+        <div class="basket">
             <div class='busket-sum' v-if='empty()'>
                 <p>Ваша корзина пуста</p><br>
                 <div class='takeme'>

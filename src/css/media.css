@@ -72,17 +72,17 @@
     }
     
     .about-text{
-        width:99%;
+        width:97%;
         padding-right: 2px;
     }
     
     .products-menu{
         position:sticky;
+        text-align: left;
         top:50%;
-        max-width: 30%;
+        max-width: 40%;
         left:0;
-        padding: 0;
-        font-size:40%;
+        font-size:65%;
         display: flex;
         flex-direction: column;
         justify-content:flex-start;
@@ -91,6 +91,7 @@
     
     .products-nav, .products-nav-active{
         margin-top: 2px;
+        padding: 0px !important;
     }
     
     .products{
@@ -107,11 +108,10 @@
     }
     
     .grid{
-        width: 75vw;
-        display: grid;
-        grid-template-columns: repeat(2, 45%);
-        grid-auto-rows: 45%;
-        grid-gap: 1vw;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
     }
     
     .btn-busketpart{
@@ -136,7 +136,7 @@
     
     .checkTotal table{
         width:80%;
-        font-size: 0.8em;
+        font-size: 0.45em;
     }
     
     .anketa, .checkTotal{
@@ -150,4 +150,12 @@
     .btn-marg{
         margin-bottom: 10vh;
     }
+    
+     .basket{
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
