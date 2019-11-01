@@ -8,7 +8,7 @@
     }
     
     .icon{
-        font-size: 8em;
+        font-size: 2em;
         padding-left: 5%;
     }
     
@@ -26,7 +26,7 @@
     }
     
     .menu-part{
-        font-size: 4em;
+        font-size: 1.8em;
         text-align: center;
     }
     
@@ -48,7 +48,7 @@
     }
     
     .products-nav, .products-nav:hover, .products-nav-active{
-        font-size: 3em;
+        font-size: 1.8em;
         margin-right: 1px;
     }
 
