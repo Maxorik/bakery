@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Hotel Grand Budapest</title><style>/*!
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width; initial-scale=1.0"><title>Hotel Grand Budapest</title><style>/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2007,4 +2007,299 @@ table tr{
 footer{
     border-top: 1px solid #1c0c21;
     min-height: 5vh;
-}</style></head><body><header><div class="img-head"><a href="#/about"><img class="img-logo" src="assets/img/logo.png"></a></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head"><img class="img-logo" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><footer></footer><script type="text/javascript" src="assets/js/vendors.9666c3c4b2e4cb00341c.js"></script><script type="text/javascript" src="assets/js/app.9666c3c4b2e4cb00341c.js"></script></body></html>
+}@media screen and (max-width: 980px) {
+    html {
+      -webkit-text-size-adjust: none;
+   }
+    
+    .mufjpg{
+        display: none;
+    }
+    
+    .icon{
+        font-size: 8em;
+        padding-left: 5%;
+    }
+    
+    .icons{
+        width: 50vw;
+        margin-bottom: 3%;
+    }
+    
+    .row-flex{
+        align-items:center;
+    }
+
+    .main_part{
+        justify-content:flex-start;
+    }
+    
+    .menu-part{
+        font-size: 4em;
+        text-align: center;
+    }
+    
+    .menu-route:after, .nav-active:after{
+        display: none;
+    }
+    
+    .products{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-top: 1%;
+    }
+    
+    .product-item{
+        margin-right: 0;
+        width: 80%;
+    }
+    
+    .products-nav, .products-nav:hover, .products-nav-active{
+        font-size: 3em;
+        margin-right: 1px;
+    }
+
+}
+/*/////////////////////////////////////////////////////////////////////*/
+/*busket part*/
+    .busket-change{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .busket-product{
+        font-size: 1.5em;
+    }
+    
+    .btn-circle{
+        margin: 2%;
+        width: 20%;
+        height: 25%;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    
+    .grid{
+        width: 75vw;
+        display: grid;
+        grid-template-rows: repeat(3, 45%);
+        grid-template-columns: repeat(4, 20%);
+        grid-gap: 2vw;
+    }
+
+.busket-sum{
+    font-size: 1.5em;
+}
+
+.check, .check-head{
+    font-size: 1.3em;
+}
+
+.check{
+    text-align: center;
+}
+
+.check:first-child{
+    text-align: left;
+}
+
+.check-head{
+    padding: 0 20px;
+}
+
+.takeme{
+    width:45%;
+    text-align: center;
+}
+
+.takeme-img{
+    width:50%;
+    height: auto;
+}
+
+/*products part*/
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+
+.product-item:last-child{
+    margin-right:0;
+}
+    
+    .product-img{
+        width:100%;
+        height: auto;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    
+    .product-count{
+        width:64%;
+        text-align: center;
+    }
+    
+    .products-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+
+.top-menu-hr{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+
+    .product-button{
+        width:35%;
+        text-align: center;
+    }
+    
+    .btn-del{
+        margin-left: 65%;
+        margin-top: -3%;
+    }
+    
+    .btn-part{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    
+    .btn-route{
+        font-size: 1.1em;
+        line-height: 1.5em;
+        padding: 0 1em;
+        border-radius: 10px;
+    }
+
+
+.product-name{
+    font-size: 1.3em;
+    line-height: 1.35em;
+    text-align: center;
+}
+
+/*navigation part*/
+
+    
+    .menu-route{
+        padding: 5px;
+        position: relative;
+    }
+
+.menu-route::after {
+    position: absolute;
+    right: -1.88em; top:-0.05em;
+    border: 0.98em solid transparent;
+    border-left: 0.9em solid transparent;
+}
+
+.menu-route:hover:after {
+    content: ''; 
+    position: absolute;
+    right: -1.88em; top:-0.05em;
+    border: 0.98em solid transparent;
+    border-left: 0.9em solid #c891b9;
+}
+    
+    .menu-route:hover, .menu-route:focus{
+        position: relative;
+    }
+
+    .nav-active{
+        padding: 5px;
+    }
+
+.nav-active:after {
+    content: ''; 
+    position: absolute;
+    right: -1.88em; top:-0.05em;
+    border: 0.98em solid transparent;
+    border-left: 0.9em solid #1c0c21;
+}
+
+/*order part*/
+    .checklist{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .anketa{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .anketa div, .auto{
+        width: 100%;
+    }
+    
+    .anketa-input{
+        margin-bottom: 10px;
+    }
+    
+    ::-webkit-inner-spin-button { display: none; }
+
+    
+    .time{
+        text-align: center;
+    }
+
+table tr{
+    border-bottom: 1px solid #c891b9;
+}
+
+.total-sum{
+    text-align: center;
+    font-size: 1.7em;
+}
+
+/*about*/
+.about-here{
+    display:flex;
+    justify-content: space-between;
+}
+
+.about-text{
+    width:50%;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-here p{
+    padding: 0;
+    margin: 0;
+}
+
+.about-img{
+    width:94%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.what-btn{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.btn-route{
+    padding: 5px 20px;
+}
+
+/*footer*/
+footer{
+    border-top: 1px solid #1c0c21;
+    min-height: 5vh;
+}</style></head><body><header><div class="img-head"><a href="#/about"><img class="img-logo" src="assets/img/logo.png"></a></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head mufjpg"><img class="img-logo" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><footer></footer><script type="text/javascript" src="assets/js/vendors.5d7155583caabd2de867.js"></script><script type="text/javascript" src="assets/js/app.5d7155583caabd2de867.js"></script></body></html>
