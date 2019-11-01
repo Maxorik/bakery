@@ -21,7 +21,7 @@
         </div>
         <div class='order-total'>
             <p class='busket-sum'>Ваш заказ:</p>
-            <div v-if='productsToOrder.length == 0' class='check'>
+            <div v-if='productsToOrder.length == 0' class='check btn-marg'>
                 <p style='margin-bottom:10px;'>Пока что вы ничего не заказали</p><br>
                 <router-link class='btn-route' to='/products'>К кексикам! </router-link>
             </div>
