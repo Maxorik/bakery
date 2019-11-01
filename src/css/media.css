@@ -43,6 +43,10 @@
         display: none;
     }
     
+    .menu-route:active, .menu-route:link{
+        background-color: #1c0c21;
+    }
+    
     .products{
         display: flex;
         align-items: center;
@@ -72,19 +76,20 @@
     }
     
     .about-text{
-        width:100%;
+        width:99%;
+        padding-right: 2px;
     }
     
     .products-menu{
         position:sticky;
         top:50%;
-        max-width: 25%;
+        max-width: 30%;
         left:0;
-        font-size:95%;
+        font-size:60%;
         display: flex;
         flex-direction: column;
         justify-content:flex-start;
-        margin-left: -25%;
+        margin-left: -50%;
     }
     
     .products-nav, .products-nav-active{
@@ -107,9 +112,9 @@
     .grid{
         width: 75vw;
         display: grid;
-        grid-template-rows: repeat(3, 15%);
         grid-template-columns: repeat(2, 45%);
-        grid-gap: 2vw;
+        grid-auto-rows: 45%;
+        grid-gap: 1vw;
     }
     
     .btn-busketpart{
@@ -134,5 +139,13 @@
     .checkTotal table{
         width:80%;
         font-size: 1em;
+    }
+    
+    .anketa, .checkTotal{
+        max-width: 73vw;
+    }
+    
+    .checkTotal{
+        font-size: 0.7em;
     }
 }
