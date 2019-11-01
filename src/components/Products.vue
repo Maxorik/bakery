@@ -11,7 +11,8 @@
             
             <!-- transition -->
             
-            <transition name='fadeAndReturn'>
+            <transition name='fadeAndReturn'
+                        enter-active-class = "animated fadeIn">
             <div class='products' v-if='productType==2' key='muffins'>
                 <div v-for='product in muffins' class='product-item'>
                     <div class='product-name'>{{ product.name }}</div>
@@ -113,42 +114,3 @@
     }
                                       
 </script>
-
-<style>
-    .fadeAndReturn-enter{
-        opacity:0;
-    }
-    
-    .fadeAndReturn-enter-active{
-        transition: opacity 1s;
-        animation: slideIn 0.5s;
-    }
-    
-     .fadeAndReturn-enter-to{
-        
-    }
-    
-    .fadeAndReturn-leave{
-        position: absolute;
-    }
-    
-    .fadeAndReturn-leave-active{
-        transition: opacity 1s;
-        opacity: 0;
-        animation: slideOut 0.5s;
-    }
-    
-    .fadeAndReturn-leave-to{
-        position: absolute;
-    }
-    
-    @keyframes slideIn{
-		from{transform: translateX(-100vw);}
-		to{transform: translateX(0px);}
-	}
-
-	@keyframes slideOut{
-		from{transform: translateX(0px);}
-		to{transform: translateX(100vw);}
-	}
-</style>

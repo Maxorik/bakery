@@ -1,7 +1,10 @@
 <template>
     <section>
         <div class="router">
-            <router-view></router-view>
+            <transition name="routeThePart"
+                        enter-active-class = "animated pulse">
+                <router-view></router-view>
+            </transition>
         </div>
     </section>
 </template>
