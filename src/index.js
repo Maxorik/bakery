@@ -1,3 +1,4 @@
+require('./js/btnAnimation.js');
 import store from './store';
 import {router} from './routes.js';
 
