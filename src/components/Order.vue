@@ -25,7 +25,7 @@
                 <p style='margin-bottom:10px;'>Пока что вы ничего не заказали</p><br>
                 <router-link class='btn-route' to='/products'>К кексикам! </router-link>
             </div>
-            <div  v-else><table>
+            <div class='checkTotal' v-else><table>
                 <tr>
                     <td class='check-head'>Наименование</td>
                     <td class='check-head'>Количество</td>

@@ -23,9 +23,9 @@
             <div>
                 <p v-if='!empty()' class='busket-sum'>Всего к оплате: {{ordersum}} рублей</p>
             </div>
-            <div class='btn-part'>
+            <div class='btn-busketpart'>
                 <router-link class='btn-route' to='/products' v-if='!empty()'>Выбрать еще</router-link>
-                <router-link class='btn-route' to='/order' v-if='!empty()'>Оформить заказ</router-link>
+                <router-link class='btn-route btn-orderthis' to='/order' v-if='!empty()'>Оформить заказ</router-link>
             </div>
         </div>
     </section>

@@ -134,7 +134,7 @@ function getMuffins(){
         },
         {
             id: 2,
-            name: 'Шоколадный восторг',
+            name: 'Кофейный рай',
             price: 310,
             photo: './img/muf2.jpg',
             count:''
@@ -160,7 +160,7 @@ function getCapcakes(){
         },
         {
             id: 4,
-            name: 'Звездная нежность',
+            name: 'Нежная звезда',
             price: 145,
             photo: './img/cap1.jpg',
             count:''
@@ -186,7 +186,7 @@ function getRulets(){
     return [
         {
             id: 7,
-            name: 'Клубничный водопад',
+            name: 'Это клубника!',
             price: 300,
             photo: './img/rulet1.jpg',
             count:''
