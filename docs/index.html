@@ -1593,7 +1593,109 @@
 .slideOutUp {
   animation-name: slideOutUp;
 }
-@font-face {
+    button.bot9{
+        display:block;
+        width:59%;
+        text-align: center;
+        border:none;
+        cursor: pointer;
+        background-color:#c891b9;
+        font-family: 'Open Sans', sans-serif;
+        
+        font-weight:bold;
+        text-decoration:none;
+        color:#1c0c21;
+        text-shadow:rgba(255,255,255,0.6) 1px 1px 0;
+        position:relative;
+        padding:2px 5px;
+        background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
+        background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(255,255,255)),
+        color-stop(1, rgb(200,145,185))
+        );
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #c891b9;
+    }   
+
+    button.bot9:active {
+        top:3px;
+        background-image: linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
+        background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(200,145,185)),
+        color-stop(1, rgb(255,255,255))
+        );
+        -webkit-box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
+        -moz-box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
+        -o-box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
+        box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
+    }
+
+    button.bot9::before {
+        background-color:#792963;
+        background-repeat:no-repeat;
+        background-position:center center;
+        padding: 1px;
+        content:"\2714";
+        color:beige;
+        text-shadow:none;
+        font-weight:normal;
+        vertical-align:middle;
+        padding: 2px 0 0 4px;
+        width:1.2em;
+        height:1.2em;
+        position:absolute;
+        right:0.4em;
+        top:50%;
+        margin-top:-9px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
+        -moz-box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
+        -o-box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
+        box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    button.btn-del:before{
+        padding: 1px;
+        content:'\2718';
+    }
+    
+    button.bot9:active::before {
+        top:50%;
+        margin-top:-12px;
+        -webkit-box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
+        -moz-box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
+        -o-box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
+        box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
+    }
+
+button.bot9, 
+button.bot9:active, 
+button.bot9:focus {
+    outline: none;
+}@font-face {
 	font-family: 'LydianBT-Roman';
 	src: url('assets/fonts/CMLIRTA_N.eot');
 	src: local('☺'), url('assets/fonts/CMLIRTA_N.woff') format('woff'), url('assets/fonts/CMLIRTA_N.ttf') format('truetype'), url('assets/fonts/CMLIRTA_N.svg') format('svg');
@@ -2004,109 +2106,26 @@ table tr{
 footer{
     border-top: 1px solid #1c0c21;
     min-height: 5vh;
-}    button.bot9{
-        display:block;
-        width:59%;
-        text-align: center;
-        border:none;
-        cursor: pointer;
-        background-color:#c891b9;
-        font-family: 'Open Sans', sans-serif;
-        
-        font-weight:bold;
-        text-decoration:none;
-        color:#1c0c21;
-        text-shadow:rgba(255,255,255,0.6) 1px 1px 0;
-        position:relative;
-        padding:2px 5px;
-        background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
-        background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
-        background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
-        background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
-        background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(200,145,185) 100%);
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, rgb(255,255,255)),
-        color-stop(1, rgb(200,145,185))
-        );
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -o-border-radius: 5px;
-        border-radius: 5px;
-        border: 1px solid #c891b9;
-    }   
-
-    button.bot9:active {
-        top:3px;
-        background-image: linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
-        background-image: -o-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
-        background-image: -moz-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
-        background-image: -webkit-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
-        background-image: -ms-linear-gradient(bottom, rgb(200,145,185) 0%, rgb(255,255,255) 100%);
-        background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, rgb(200,145,185)),
-        color-stop(1, rgb(255,255,255))
-        );
-        -webkit-box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
-        -moz-box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
-        -o-box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
-        box-shadow: inset 0px 1px 0px #c891b9, 0px 2px 0px 0px #4e295a, 0px 3px 3px #999;
-    }
-
-    button.bot9::before {
-        background-color:#792963;
-        background-repeat:no-repeat;
-        background-position:center center;
-        padding: 1px;
-        content:"\2714";
-        color:beige;
-        text-shadow:none;
-        font-weight:normal;
-        vertical-align:middle;
-        padding: 2px 0 0 4px;
-        width:1.2em;
-        height:1.2em;
-        position:absolute;
-        right:0.4em;
-        top:50%;
-        margin-top:-9px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
-        -webkit-box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
-        -moz-box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
-        -o-box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
-        box-shadow: inset 0px 1px 0px #1c0c21, 0px 1px 0px #e1a6d1;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    button.btn-del:before{
-        padding: 1px;
-        content:'\2718';
+}@media screen and (max-width: 980px){
+    button .product-button .bot9{
+        font-size:0.5em !important;
+        padding: 0 !important;
+        text-align: left !important;
     }
     
-    button.bot9:active::before {
-        top:50%;
-        margin-top:-12px;
-        -webkit-box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
-        -moz-box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
-        -o-box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
-        box-shadow: inset 0px 1px 0px #e1a6d1, 0px 3px 0px #2d1335, 0px 6px 3px #792963;
+    .product-name{
+        display: flex;
+        min-height: 3.1em;
+        align-items: center;
+        justify-content: center;
     }
+    
+    .product-count{
+        font-size: 70%;
+    }
+}
 
-button.bot9, 
-button.bot9:active, 
-button.bot9:focus {
-    outline: none;
-}@media screen and (max-width: 980px) and (orientation: landscape){
+@media screen and (max-width: 768px){
     html {
       -webkit-text-size-adjust: none;
    }
@@ -2187,11 +2206,12 @@ button.bot9:focus {
     
     .products-menu{
         position:sticky;
-        text-align: left;
+        position: -webkit-sticky;
+        text-align: center;
         top:50%;
-        max-width: 40%;
+        max-width: 35%;
         left:0;
-        font-size:65%;
+        font-size:100%
         display: flex;
         flex-direction: column;
         justify-content:flex-start;
@@ -2266,5 +2286,22 @@ button.bot9:focus {
         align-items: center;
         justify-content: center;
     }
-    
-}</style></head><body><header><div class="img-head"><a href="#/about"><img class="img-logo" src="assets/img/logo.png"></a></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head mufjpg"><img class="img-logo" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><footer></footer><script type="text/javascript" src="assets/js/vendors.f6245ac22fe9e5f985d3.js"></script><script type="text/javascript" src="assets/js/app.f6245ac22fe9e5f985d3.js"></script></body></html>
+}
+
+
+@media screen and (max-width: 600px){
+     .products-menu{
+        position:sticky;
+        position: -webkit-sticky;
+        text-align: left;
+        top:50%;
+        max-width: 40%;
+        left:0;
+        font-size:65%;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        margin-left: -50%;
+    }
+}
+</style></head><body><header><div class="img-head"><a href="#/about"><img class="img-logo" src="assets/img/logo.png"></a></div><div class="row-flex"><div class="icons"><span class="fa fa-instagram icon"></span><span class="fa fa-vk icon"></span><span class="fa fa-facebook-square icon"></span></div><div class="img-head mufjpg"><img class="img-logo" src="assets/img/tohead.png"></div></div></header><div class="main_part"><div class="nav-here"><nav-component></nav-component></div><div class="router-part"><torouter-component></torouter-component></div></div><div class="about-here"></div><div class="products-here"></div><div class="busket-here"></div><div class="order-here"></div><footer></footer><script type="text/javascript" src="assets/js/vendors.bd0471dc5bcd454c04be.js"></script><script type="text/javascript" src="assets/js/app.bd0471dc5bcd454c04be.js"></script></body></html>
