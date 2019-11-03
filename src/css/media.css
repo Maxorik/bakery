@@ -1,4 +1,4 @@
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) and (orientation: landscape){
     html {
       -webkit-text-size-adjust: none;
    }
@@ -36,6 +36,7 @@
     
     .nav-here section{
         position:sticky;
+        position: -webkit-sticky;
         top:2em;
     }
     
