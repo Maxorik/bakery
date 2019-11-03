@@ -19,13 +19,13 @@
                     <img :src='product.photo' class='product-img'>
                     <div class='product-name'>Цена: {{ product.price }} ₽ </div>
                     <div class='flex'>
-                        <input type=text class='product-count' placeholder='Сколько штук?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
-                        <button class='product-button'
+                        <input type=text class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
+                        <button class='product-button bot9'
                                 @click='add([product.id, product.count])'
                                 >Взять</button>
                     </div>
                     <div class='flex'>
-                        <button class='product-button btn-del' @click='remove(product.id); discount(product.id)'>Убрать</button>
+                        <button class='product-button btn-del bot9' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
@@ -36,12 +36,12 @@
                     <img :src='product.photo' class='product-img'>
                     <div class='product-name'>Цена: {{ product.price }} ₽ </div>
                     <div class='flex'>
-                        <input type=text class='product-count' placeholder='Сколько штук?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
-                        <button class='product-button' @click='add([product.id, product.count])'>Взять</button>
+                        <input type=text class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
+                        <button class='product-button bot9' @click='add([product.id, product.count])'>Взять</button>
                     </div>
                     
                     <div class='flex'>
-                       <button class='product-button btn-del' @click='remove(product.id); discount(product.id)'>Убрать</button>
+                       <button class='product-button btn-del bot9' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
@@ -52,12 +52,12 @@
                     <img :src='product.photo' class='product-img'>
                     <div class='product-name'>Цена: {{ product.price }} ₽</div>
                     <div class='flex'>
-                        <input type=text class='product-count' placeholder='Сколько штук?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
-                        <button class='product-button' @click='add([product.id, product.count])'>Взять</button>
+                        <input type=text class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
+                        <button class='product-button bot9' @click='add([product.id, product.count])'>Взять</button>
                     </div>
                     
                     <div class='flex'>
-                        <button class='product-button btn-del' @click='remove(product.id); discount(product.id)'>Убрать</button>
+                        <button class='product-button btn-del bot9' @click='remove(product.id); discount(product.id)'>Убрать</button>
                     </div>
                 </div>
             </div>
