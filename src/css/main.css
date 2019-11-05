@@ -277,7 +277,7 @@ header{
 .menu-route::after {
     content: ''; 
     position: absolute;
-    right: -1.88em; top:-0.05em;
+    right: -1.8em; top:-0.05em;
     border: 0.98em solid transparent;
     border-left: 0.9em solid transparent;
 }
@@ -285,7 +285,7 @@ header{
 .menu-route:hover:after {
     content: ''; 
     position: absolute;
-    right: -1.88em; top:-0.05em;
+    right: -1.8em; top:-0.05em;
     border: 0.98em solid transparent;
     border-left: 0.9em solid #c891b9;
 }
@@ -315,7 +315,7 @@ header{
 .nav-active:after {
     content: ''; 
     position: absolute;
-    right: -1.88em; top:-0.05em;
+    right: -1.8em; top:-0.05em;
     border: 0.98em solid transparent;
     border-left: 0.9em solid #1c0c21;
 }
