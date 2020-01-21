@@ -19,7 +19,7 @@
                     <img :src='product.photo' class='product-img'>
                     <div class='product-name'>Цена: {{ product.price }} ₽ </div>
                     <div class='flex'>
-                        <input type=text class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
+                        <input type='number' class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
                         <button class='product-button bot9'
                                 @click='add([product.id, product.count])'
                                 >Взять</button>
@@ -36,7 +36,7 @@
                     <img :src='product.photo' class='product-img'>
                     <div class='product-name'>Цена: {{ product.price }} ₽ </div>
                     <div class='flex'>
-                        <input type=text class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
+                        <input type='number' class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
                         <button class='product-button bot9' @click='add([product.id, product.count])'>Взять</button>
                     </div>
                     
@@ -52,7 +52,7 @@
                     <img :src='product.photo' class='product-img'>
                     <div class='product-name'>Цена: {{ product.price }} ₽</div>
                     <div class='flex'>
-                        <input type=text class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
+                        <input type='number' class='product-count' placeholder='Сколько?' v-model='product.count' v-on:input='setcount([product.id, product.count])'>
                         <button class='product-button bot9' @click='add([product.id, product.count])'>Взять</button>
                     </div>
                     
